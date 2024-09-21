@@ -7,8 +7,6 @@ const port = 4000;
 
 // for handling cors
 const cors_options = {
-    // origin: "http://127.0.0.1:3000", // public URL
-    // origin: "https://tth.000.pe", // public URL
     origin: "*",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     methods: "POST",
@@ -19,7 +17,6 @@ app.use(cors(cors_options));
 //handling Database :-
 const connect_db = async () => {
     try {
-        // await mongoose.connect('mongodb://localhost:27017/Tarini_tent_house'); // for local database
         await mongoose.connect('mongodb+srv://tth_admin:TTH98570@tth-cluster.jc6u3.mongodb.net/Tarini_tent_house?retryWrites=true&w=majority&appName=tth-cluster'); // for internet database
         console.log("db is connected", mongoose.connection.host);
     }
@@ -270,10 +267,3 @@ app.post('/api/post/:slug', async (req, res) => {
 app.listen(port, () => {
     console.log(`App listening port is ${port}`);
 })
-
-// const bad = async () => {
-//     const bades = await Request.find({});
-//     console.log(bades);
-// }
-
-// bad();
