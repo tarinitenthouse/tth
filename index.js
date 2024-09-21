@@ -203,7 +203,7 @@ app.post('/api/post/:slug', async (req, res) => {
             const email_status = await send_mail(user_data.email, "Your request status of Tarini Tent House", `Hello,
             Thank you for requesting TTH(Tarini Tent House)! Your request submited successfully. As soon possible your request will be resolve by our team member. Please Login or Singn Up to modify your request .`)
 
-            if (email_status != 200) {
+            if (email_status == 200) {
                 await Request.deleteMany({ description: user_data.description });
                 user_data.reply = "pending";
                 const request = new Request(user_data);
