@@ -7,7 +7,7 @@ const port = 4000;
 
 // for handling cors
 const cors_options = {
-    origin: "https://tth.000.pe", // public URL
+    origin: "https://tth.my-style.in", // public URL
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     methods: "POST",
     credentials: true,
