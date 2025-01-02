@@ -121,12 +121,12 @@ app.post('/api/post/:slug', async (req, res) => {
             if (user_data.forget_password_status == "true") {
                 email_status = await send_mail(email_id, "Verify email address for reset password on Tarini Tent House", `Hello,
                  To reset the account password on Tarini Tent House,
-                  Please verify your email address By providing this OTP (${otp}) in our website https://tth.000.pe.
+                  Please verify your email address By providing this OTP (${otp}) in our website https://tth.my-style.in.
                 If you are not doing this, please contact us as soon possible, or else no further action is required, your email address will be deleted automatically after a few minutes.`)
             } else {
                 email_status = await send_mail(email_id, "Verify email address for Tarini Tent House", `Hello,
                  Thank you for signing up! To able to create your first account on Tarini Tent House,
-                  Please verify your email address By providing this OTP (${otp}) in our website https://tth.000.pe.
+                  Please verify your email address By providing this OTP (${otp}) in our website https://tth.my-style.in.
                 If you did not sign up, no further action is required, your email address will be deleted automatically after a few minutes.`)
             }
 
